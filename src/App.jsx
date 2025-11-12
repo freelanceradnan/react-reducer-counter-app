@@ -1,10 +1,12 @@
 import { useReducer } from "react"
 const newReducer=(state,action)=>{
-if(action==='increase_by_1'){
-  return state+1;
-}
-else if(action==='decrease_by_1'){
-  return state-1;
+switch(action){
+  case 'increase_by_1':{
+    return state+1;
+  }
+  case 'decrease_by_1':{
+return state-1;
+  }
 }
 }
 const App=()=>{
